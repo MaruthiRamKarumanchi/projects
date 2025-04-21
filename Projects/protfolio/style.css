@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: 'Fira Code', monospace;
+    background-color: #000;
+    color: #fff;
+}
+
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.role {
+    color: #a992f7;
+    font-style: italic;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #f4d35e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #00ffff;
+}
+
+
+section {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 100%;
+    width: 100%;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero {
+    height: 800px;
+    background-image: url('images/bg\ \(1\).png');
+}
+
+h1 {
+    width: 22ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #f4d35e;
+    font-family: "Courier New", monospace;
+    font-size: 2rem;
+    animation: typing 8s steps(23) infinite, blink 0.7s step-end infinite;
+    transition: all ease-in-out 2s;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 26ch;
+    }
+}
+
+@keyframes blink {
+    100% {
+        border-color: transparent;
+    }
+}
+
+.about {
+    background-image: url('images/about.png');
+    z-index: 1000;
+}
+
+.about-text {
+    line-height: 30px;
+}
+
+.closing-tag {
+    color: #a992f7;
+    font-size: large;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 2rem;
+}
+
+.projects-grid a {
+    text-decoration: none;
+}
+
+.project-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+}
+
+.projects-grid a .project-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    color: #f4d35e;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: #ccc;
+    text-decoration: none;
+}
+
+
+
+.skills {
+    background-image: url('images/resume-bg.jpg');
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #00fff7;
+}
+
+.skill img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.coming-soon {
+    margin-top: 2rem;
+    font-style: italic;
+    color: #bbb;
+    text-align: center;
+}
+
+.soon {
+    color: #facc15;
+    font-weight: bold;
+}
+
+.contact-terminal {
+    background-image: url('./images.jpeg');
+}
+
+.contact-terminal {
+    background-color: #0d0d0d;
+    color: #00ff95;
+    font-family: 'Courier New', monospace;
+    padding: 3rem 2rem;
+    text-align: left;
+}
+
+.contact-terminal h2 {
+    color: #f4d35e;
+    margin-bottom: 2.8rem;
+    font-size: 2.4rem;
+}
+
+.terminal-output {
+    background: #000000;
+    padding: 5rem;
+    border-radius: 10px;
+    border: 3px solid #00ff95;
+    line-height: 2;
+}
+
+.prompt {
+    color: #00ff95;
+    margin-right: 0.5rem;
+    font-size: 20px;
+    font-weight: bolder;
+
+}
+
+.prompt span {
+
+    font-size: 14px;
+
+}
+
+.terminal-output a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+
+.terminal-output a i {
+    font-size: 22px;
+}
+
+.terminal-output a:hover {
+    color: #00ffff;
+}
+
+.contact-terminal {
+    margin: 80px 0;
+    padding: 0px;
+}
+
+.cursor {
+    display: inline-block;
+    width: 20px;
+    color: #00ff95;
+    animation: blink1 1s step-start infinite;
+}
+
+@keyframes blink1 {
+    50% {
+        opacity: 0;
+    }
+}
+
+.footer {
+    background-color: #111827;
+    color: #9ca3af;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    font-family: "Courier New", monospace;
+    border-top: 1px solid #374151;
+}
+
+.footer p {
+    margin: 0;
+}
+
+
+.intro {
+    color: #ddd;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+h1,
+h2 {
+    font-size: 2.5rem;
+    color: #f4d35e;
+    margin-bottom: 1rem;
+}
+
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    h1,
+    h2 {
+        font-size: 2rem;
+    }
+
+    .overlay {
+        padding: 3rem 1.5rem;
+    }
+
+    .projects-grid,
+    .skills-grid {
+        gap: 1.2rem;
+    }
+
+    .contact-terminal {
+        margin-top: 3rem;
+    }
+
+    .terminal-output {
+        padding: 3rem;
+    }
+}
+
+
+@media screen and (max-width: 900px) and (min-width: 601px) {
+    .navbar {
+        padding: 1rem 1rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    h1,
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .project-card,
+    .skill {
+        font-size: 0.9rem;
+    }
+
+    .overlay {
+        padding: 2rem 1rem;
+    }
+
+    .terminal-output {
+        padding: 2rem;
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.8rem;
+    }
+
+    .logo {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3rem;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    h1,
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .overlay {
+        padding: 1.5rem 1rem;
+    }
+
+    .project-card h3,
+    .project-card p,
+    .skill span,
+    .coming-soon {
+        font-size: 0.75rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 1rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .terminal-output {
+        padding: 1.2rem;
+        font-size: 0.8rem;
+    }
+
+    .footer {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (min-width: 901px) {
+    section {
+        margin-bottom: 5rem;
+    }
+
+    .projects-grid,
+    .skills-grid {
+        gap: 2rem;
+    }
+
+    .contact-terminal {
+        margin-top: 5rem;
+    }
+}
